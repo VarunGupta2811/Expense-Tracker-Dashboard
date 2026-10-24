@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Expense Tracker</h1>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Income</h3>
+                <p id="totalIncome">₹0.00</p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Expenses</h3>
+                <p id="totalExpenses">₹0.00</p>
+            </div>
+            <div class="summary-card">
+                <h3>Balance</h3>
+                <p id="balance">₹0.00</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Add Transaction</h2>
+
+            <label for="description">Description</label>
+            <input id="description" type="text"
+                   placeholder="e.g. Salary or Groceries">
+
+            <label for="amount">Amount</label>
+            <input id="amount" type="number"
+                   placeholder="Enter amount">
+
+            <label for="type">Transaction Type</label>
+            <select id="type">
+                <option value="">Select type</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <label for="category">Category</label>
+            <select id="category">
+                <option value="">Select category</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Salary">Salary</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <p id="message" class="message"></p>
+            <button id="addBtn">Add Transaction</button>
+        </section>
+
+        <section class="card">
+            <h2>Transaction History</h2>
+
+            <label for="filter">Filter by Category</label>
+            <select id="filter">
+                <option value="All">All Categories</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Salary">Salary</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <ul id="transactionList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
